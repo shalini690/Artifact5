@@ -1,5 +1,5 @@
-# Node.js dependencies
+# Dependencies installed by `npm install` (regenerated locally, never committed)
 node_modules/
 
-# npm debug logs
+# npm debug/error logs
 npm-debug.log*
