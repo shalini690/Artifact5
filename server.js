@@ -39,6 +39,15 @@ const express = require('express');
 // internally creates and returns a Node.js `http.Server`.
 const app = express();
 
+// Disable the `X-Powered-By: Express` response header. Express enables this
+// app setting by default, advertising the framework on every response, which
+// discloses an internal implementation detail to clients and aids
+// fingerprinting. Disabling it follows Express' official security guidance and
+// removes the header from all responses. This is a built-in app setting — it
+// adds no middleware, routes, modules, or dependencies, preserving the
+// project's minimal footprint.
+app.disable('x-powered-by');
+
 /**
  * GET /
  *
